@@ -18,6 +18,17 @@
         <pigeon.version>2.9.7</pigeon.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>github-dianping-maven-repo</id>
+            <url>https://raw.githubusercontent.com/dianping/maven-repo/master</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>com.alibaba.csp</groupId>
