@@ -42,7 +42,6 @@ public class FooProviderBootstrap {
         // Users don't need to manually call this method.
         // Only for eager initialization.
         InitExecutor.doInit();
-
         initFlowRule();
 
         ClassPathXmlApplicationContext providerContext = new ClassPathXmlApplicationContext("spring/provider.xml");
