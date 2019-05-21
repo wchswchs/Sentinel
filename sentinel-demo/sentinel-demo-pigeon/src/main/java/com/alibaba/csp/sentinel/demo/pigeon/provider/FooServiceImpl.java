@@ -29,8 +29,4 @@ public class FooServiceImpl implements FooService {
         return String.format("Hello, %s at %s", name, LocalDateTime.now());
     }
 
-    @Override
-    public String doAnother() {
-        return LocalDateTime.now().toString();
-    }
 }

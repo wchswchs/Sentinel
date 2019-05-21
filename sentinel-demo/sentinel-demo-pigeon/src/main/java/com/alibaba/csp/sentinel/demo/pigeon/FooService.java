@@ -22,5 +22,4 @@ public interface FooService {
 
     String sayHello(String name);
 
-    String doAnother();
 }
