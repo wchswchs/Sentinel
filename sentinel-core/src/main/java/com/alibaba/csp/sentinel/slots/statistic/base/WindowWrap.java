@@ -34,7 +34,7 @@ public class WindowWrap<T> {
     /**
      * Start timestamp of the window in milliseconds.
      */
-    @Contended
+    @Contended("ws")
     private long windowStart;
 
     /**
