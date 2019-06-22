@@ -15,6 +15,8 @@
  */
 package com.alibaba.csp.sentinel.slots.statistic.base;
 
+import sun.misc.Contended;
+
 /**
  * Wrapper entity class for a period of time window.
  *
@@ -22,6 +24,7 @@ package com.alibaba.csp.sentinel.slots.statistic.base;
  * @author jialiang.linjl
  * @author Eric Zhao
  */
+@Contended
 public class WindowWrap<T> {
 
     /**
