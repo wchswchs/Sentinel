@@ -15,8 +15,6 @@
  */
 package com.alibaba.csp.sentinel.slots.statistic.base;
 
-import sun.misc.Contended;
-
 /**
  * Wrapper entity class for a period of time window.
  *
@@ -24,23 +22,14 @@ import sun.misc.Contended;
  * @author jialiang.linjl
  * @author Eric Zhao
  */
-public class WindowWrap<T> {
+public class WindowWrap<T> extends WindowWrapFields<T> {
+
+    protected long p9, p10, p11, p12, p13, p14, p15;
 
     /**
      * Time length of a single window bucket in milliseconds.
      */
     private final long windowLengthInMs;
-
-    /**
-     * Start timestamp of the window in milliseconds.
-     */
-    @Contended("ws")
-    private long windowStart;
-
-    /**
-     * Statistic data.
-     */
-    private T value;
 
     /**
      * @param windowLengthInMs a single window bucket's time length in milliseconds.
@@ -94,9 +83,10 @@ public class WindowWrap<T> {
     @Override
     public String toString() {
         return "WindowWrap{" +
-            "windowLengthInMs=" + windowLengthInMs +
-            ", windowStart=" + windowStart +
-            ", value=" + value +
-            '}';
+                "windowLengthInMs=" + windowLengthInMs +
+                ", windowStart=" + windowStart +
+                ", value=" + value +
+                '}';
     }
+
 }
