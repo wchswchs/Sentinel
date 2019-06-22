@@ -24,7 +24,6 @@ import sun.misc.Contended;
  * @author jialiang.linjl
  * @author Eric Zhao
  */
-@Contended
 public class WindowWrap<T> {
 
     /**
@@ -35,6 +34,7 @@ public class WindowWrap<T> {
     /**
      * Start timestamp of the window in milliseconds.
      */
+    @Contended
     private long windowStart;
 
     /**
